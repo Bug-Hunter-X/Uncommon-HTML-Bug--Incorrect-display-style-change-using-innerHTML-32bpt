@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should not be visible initially.
+  </div>
+  <script>
+    // Incorrectly using innerHTML to change the display style. 
+    document.getElementById("myDiv").innerHTML = "<div style='display:none;'>This text is hidden.</div>";
+    //The correct way is to use style.display to control the visibility of an element.
+    document.getElementById("myDiv").style.display = "none";
+  </script>
+</body>
+</html>
